@@ -1,0 +1,87 @@
+﻿This is a complete listing of the known elements of the recipe_details.json framework.
+
+{
+  "recipe_id":              // str (implicit int), not null
+  "type":                   // str, not null
+  // All except Chef
+    :"Component"
+    :"Consumable"
+    :"Refinement"
+    :"UpgradeComponent"
+  // Armorsmith, Leatherworker, Tailor
+    :"Bag"
+    :"Boots"
+    :"Bulk"                 // Armor set boxes
+    :"Coat"
+    :"Gloves"
+    :"Helm"
+    :"Insignia"
+    :"Leggings"
+    :"Shoulders"
+  // Artificer, Huntsman, Weaponsmith
+    :"Inscription"
+  // Artificer
+    :"Focus"
+    :"Potion"
+    :"Scepter"
+    :"Staff"
+    :"Trident"
+  // Chef
+    :"Dessert"
+    :"Dye"
+    :"Feast"
+    :"IngredientCooking"
+    :"Meal"
+    :"Seasoning"
+    :"Snack"
+    :"Soup"
+  // Huntsman
+    :"LongBow"
+    :"Pistol"
+    :"Rifle"
+    :"ShortBow"
+    :"Speargun"
+    :"Torch"
+    :"Warhorn"
+  // Jeweler
+    :"Amulet"
+    :"Earring"
+    :"Ring"
+  // Weaponsmith
+    :"Axe"
+    :"Dagger"
+    :"Greatsword"
+    :"Hammer"
+    :"Harpoon"
+    :"Mace"
+    :"Shield"
+    :"Sword"
+  "output_item_id":         // str (implicit int), not null
+  "output_item_count":      // str (implicit int), not null
+  "min_rating":             // str (implicit int), not null
+  "time_to_craft_ms":       // str (implicit int), not null
+  "disciplines":            // array(str), not empty
+    [
+      "Armorsmith",
+      "Artificer",
+      "Chef",
+      "Huntsman",
+      "Jeweler",
+      "Leatherworker",
+      "Tailor",
+      "Weaponsmith"
+    ],
+  "flags":                  // array(str)
+    [
+      "AutoLearned",
+      "LearnedFromitem"
+    ]
+  "ingredients":            // array(obj)
+    [
+      {
+        "item_id":            // str (implicit int), not null
+        "count":              // str (implicit int), not null
+      },
+      ...                   // repeat for each ingredient, up to 4
+    ]
+}

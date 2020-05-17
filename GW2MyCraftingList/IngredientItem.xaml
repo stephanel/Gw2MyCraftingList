@@ -1,0 +1,60 @@
+﻿<UserControl x:Class="GW2ExplorerCraftTool.IngredientItem"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="39.5" d:DesignWidth="281">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="13" />
+            <ColumnDefinition Width="32" />
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="18"/>
+        </Grid.ColumnDefinitions>
+        <Image x:Name="iHierarchic" Height="12" VerticalAlignment="Top" Width="12" Margin="0,8,0,0"></Image>
+        <Canvas x:Name="cIconContainer" Grid.Row="0" Grid.Column="1" Margin="2,2,2,2" HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Width="32" >
+            <Canvas.Background>
+                <ImageBrush x:Name="iIngredientIcon" />
+            </Canvas.Background>
+            <TextBlock x:Name="tbIngredientsCount" Text="99" Canvas.Top="19" Foreground="White" FontSize="11" HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="30" Height="12" TextAlignment="Right" Canvas.Left="1" FontWeight="Bold"/>
+        </Canvas>
+        <StackPanel Grid.Row="0" Grid.Column="2" Margin="5,0,0,0">
+            <TextBlock x:Name="tbIngredientName" TextWrapping="Wrap" Text="TextBlock" ToolTipOpening="tbIngredientName_ToolTipOpening" Cursor="Hand" VerticalAlignment="Top" Height="19" Margin="0,0,22,0">
+                <TextBlock.ToolTip>
+                    <ToolTip x:Name="ttIngredientToolTip" BorderBrush="Black" Background="#FF302323">
+                        <StackPanel Width="280">
+                            <StackPanel Height="35" Width="280" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Top">
+                                <Image x:Name="iItemToolTipIcon" Margin="2,2,2,2" VerticalAlignment="Top" Width="35" Height="35" />
+                                <TextBlock x:Name="tbItemToolTipName" FontWeight="Bold" Foreground="White" Padding="5,0,5,0" TextWrapping="Wrap" Width="250"></TextBlock>
+                            </StackPanel>
+                            <StackPanel>
+                                <TextBlock x:Name="tbItemToolTipDescription" TextWrapping="Wrap" Foreground="White"></TextBlock>
+                            </StackPanel>
+                        </StackPanel>
+                    </ToolTip>
+                </TextBlock.ToolTip>
+            </TextBlock>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="20" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Button x:Name="bRequestTradingPostData" Grid.Row="0" Grid.Column="0" Click="bRequestTradingPostData_Click" Cursor="Hand" HorizontalAlignment="Left" Width="20" VerticalAlignment="Top" Height="20" Background="#FF302323" BorderBrush="#FF302323" BorderThickness="0">
+                    <Image x:Name="iTradingPost" VerticalAlignment="Top" Stretch="Fill"></Image>
+                </Button>
+                <ItemsControl Grid.Row="0" Grid.Column="1" Margin="5,0,0,0" x:Name="pricesContainer" ScrollViewer.VerticalScrollBarVisibility="Disabled" BorderThickness="0" VerticalContentAlignment="Stretch"/>
+            </Grid>
+            <ItemsControl x:Name="ingredientsContainer" ScrollViewer.VerticalScrollBarVisibility="Disabled" VerticalContentAlignment="Stretch"/>
+        </StackPanel>
+        <Button x:Name="bExpandIngredients" Grid.Row="0" Grid.Column="3" Cursor="Hand" HorizontalAlignment="Left" Width="16" Height="16" VerticalAlignment="Top" Click="bExpandIngredients_Click" Background="{x:Null}" BorderBrush="#FF707070">
+            <TextBlock x:Name="tbButtonExpandIngredients" Text="+" Width="16" Height="18" TextAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Black" Background="#FFDDDDDD" />
+        </Button>
+    </Grid>
+</UserControl>

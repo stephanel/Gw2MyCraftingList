@@ -1,0 +1,306 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="_102465" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\102465.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ButtonSearchText" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="CheckBoxSearchAlsoIngredients" xml:space="preserve">
+    <value>Search also into ingredients</value>
+  </data>
+  <data name="CheckBoxShowCheckRecipes" xml:space="preserve">
+    <value>Show the known/checked recipes</value>
+  </data>
+  <data name="ComboBoxDisciplineFirstEntry" xml:space="preserve">
+    <value>Disciplines...</value>
+  </data>
+  <data name="ComboBoxRarityFirstEntry" xml:space="preserve">
+    <value>Rarities...</value>
+  </data>
+  <data name="ComboBoxRecipeTypeFirstEntry" xml:space="preserve">
+    <value>Types of recipe...</value>
+  </data>
+  <data name="ErrorMessageMaxLevelMustBeAnIntValue" xml:space="preserve">
+    <value>The max level must be an integer value!</value>
+  </data>
+  <data name="ErrorMessageMinLevelMustBeAnIntValue" xml:space="preserve">
+    <value>The min level must be an integer value!</value>
+  </data>
+  <data name="TextBoxCachedRecipes" xml:space="preserve">
+    <value>Downloaded recipes: {0}</value>
+  </data>
+  <data name="TextBoxCurrentDownloadFinished" xml:space="preserve">
+    <value>Downloaded finished.</value>
+  </data>
+  <data name="TextBoxCurrentDownloadInProgress" xml:space="preserve">
+    <value>Download in progress... {0}/{1} - {2:P2} - {3:D2}:{4:D2}</value>
+  </data>
+  <data name="TextBoxCurrentDownloadNewRecipesFoundNotification" xml:space="preserve">
+    <value>{0} recipe(s) to download. Please wait...</value>
+  </data>
+  <data name="TextBoxCurrentDownloadNoNewRecipesFoundNotification" xml:space="preserve">
+    <value>No new recipe found.</value>
+  </data>
+  <data name="TextBoxCurrentDownloadStarting" xml:space="preserve">
+    <value>Search for new recipes...</value>
+  </data>
+  <data name="TextBoxLevelLabel" xml:space="preserve">
+    <value>Level</value>
+  </data>
+  <data name="TextBoxSearchResult" xml:space="preserve">
+    <value>Found recipes : {0} ({1} checked recipes)</value>
+  </data>
+  <data name="TextBoxSearchResultAlterIfNoParameter" xml:space="preserve">
+    <value>Please, you need to set some parameters to search for the recipes!</value>
+  </data>
+  <data name="TextBoxSearchResultDefaultText" xml:space="preserve">
+    <value>You can search for recipes.</value>
+  </data>
+  <data name="TextBoxSearchResultInProgress" xml:space="preserve">
+    <value>Search in progress...</value>
+  </data>
+  <data name="RichTextBoxWelcomeText" xml:space="preserve">
+    <value>&lt;FlowDocument xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+              ColumnWidth="400" FontSize="14" FontFamily="Georgia"&gt;
+    &lt;Paragraph&gt;
+        Bienvenue sur GW2 Crafter - My Recipes finder.
+    &lt;/Paragraph&gt;
+    &lt;Paragraph&gt;
+        What is this fucking tool ?
+Mon objectif en créant cet outil était d'avoir sous la main la liste complète des recettes, et de pouvoir rechercher celles que je ne connaissais pas in-game.
+        L'idée était surtout de pouvoir les éliminer de cette liste au fur et à mesure de leur découverte.
+        C'est mon gros défaut sur les MMORPG : je veux toujours connaître toutes les recettes en artisanat ;)
+    &lt;/Paragraph&gt;
+    &lt;Paragraph&gt;
+        Comment ça marche ?
+        
+        L'outils récupère les données relatives aux recettes via l'API Web proposée par
+        &lt;TextBlock&gt;ArenaNet&lt;/TextBlock&gt; et celle proposée par
+        &lt;TextBlock&gt;
+            &lt;Hyperlink Name="hlGw2Spidy" NavigateUri="http://www.gw2spidy.com" Foreground="#FF4F9DFE" Cursor="Hand"&gt;Gw2Spidy&lt;/Hyperlink&gt;
+        &lt;/TextBlock&gt;.
+        Les données sont téléchargées en tache de fond. Vous pouvez donc effectuer vos recherches sans avoir à attendre que l'intégralité des recettes soient téléchargées.
+        &lt;Figure Width="200" Margin="10"&gt;
+            &lt;BlockUIContainer&gt;
+                &lt;Image Source="http://gw2explorer.koding.com/images/howto/en/menu_areas.jpg" Height="110" Width="196" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0"/&gt;
+            &lt;/BlockUIContainer&gt;
+        &lt;/Figure&gt;
+    &lt;/Paragraph&gt;
+    &lt;Paragraph&gt;Nous remerçions
+        &lt;TextBlock&gt;
+            &lt;Hyperlink Name="hlGw2Spidy2" NavigateUri="http://www.gw2spidy.com" Foreground="#FF4F9DFE" Cursor="Hand"&gt;Gw2 Spidy&lt;/Hyperlink&gt;
+        &lt;/TextBlock&gt;,
+        &lt;TextBlock&gt;
+            &lt;Hyperlink Name="hlGw2Db" NavigateUri="http://www.gw2db.com" Foreground="#FF4F9DFE" Cursor="Hand"&gt;Gw2 DB&lt;/Hyperlink&gt;
+        &lt;/TextBlock&gt; pour leur travail et pour tout ce qu'ils donnent pour le plaisir de la communauté.
+    &lt;/Paragraph&gt;
+&lt;/FlowDocument&gt;</value>
+  </data>
+  <data name="ItemDescriptionRequiredLevelLabel" xml:space="preserve">
+    <value>Required level</value>
+  </data>
+  <data name="ItemDescriptionDisciplinesLabel" xml:space="preserve">
+    <value>Disciplines</value>
+  </data>
+  <data name="TextBoxShowMeLatestDownloadedRecipes" xml:space="preserve">
+    <value>Show latest download</value>
+  </data>
+  <data name="DeleteRecipeInErrorMessageButtonDelete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="DeleteRecipeInErrorMessageButtonNotDelete" xml:space="preserve">
+    <value>Do not delete</value>
+  </data>
+  <data name="DeleteRecipeInErrorMessageContent" xml:space="preserve">
+    <value>Do you want to delete the recipes in error ?</value>
+  </data>
+  <data name="DeleteRecipeInErrorMessageTitle" xml:space="preserve">
+    <value>Recipes in error</value>
+  </data>
+  <data name="DeleteRecipeInErrorMessageContentRecipesCount" xml:space="preserve">
+    <value>recipes(s) in error</value>
+  </data>
+  <data name="TextBoxShowMeRecipesInError" xml:space="preserve">
+    <value>Show me the recipes in error</value>
+  </data>
+  <data name="TextBoxCheckingRecipesInError" xml:space="preserve">
+    <value>Checking recipes in error...</value>
+  </data>
+  <data name="TextBoxCurrentDownloadNetworkNotAvailableNotification" xml:space="preserve">
+    <value>No Internet connection available!</value>
+  </data>
+  <data name="TextBoxCurrentDownloadSomethingGoesWrong" xml:space="preserve">
+    <value>Ouch, something goes wrong!</value>
+  </data>
+  <data name="ChangeLanguageMessageButtonNo" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="ChangeLanguageMessageButtonYes" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="ChangeLanguageMessageContent" xml:space="preserve">
+    <value>Changing the language will restart the application.
+Are you sure you want to change the language ?</value>
+  </data>
+  <data name="ChangeLanguageMessageTitle" xml:space="preserve">
+    <value>Changing the language</value>
+  </data>
+  <data name="SomethingIsWrongWithThisIngredient" xml:space="preserve">
+    <value>Something is wrong with this ingredient!</value>
+  </data>
+  <data name="SomethingIsWrongWithThisRecipe" xml:space="preserve">
+    <value>Something is wrong with this recipe!</value>
+  </data>
+  <data name="ItemDescriptionIsCraftableLabel" xml:space="preserve">
+    <value>Can be crafted!</value>
+  </data>
+  <data name="SomethingIsWrongNoDownloadPossible" xml:space="preserve">
+    <value>Something goes wrong with download. Please try later!</value>
+  </data>
+  <data name="TextBoxCurrentDownloadLoadingCachedRecipes" xml:space="preserve">
+    <value>Loading cached recipes. Please wait...</value>
+  </data>
+  <data name="WikiHyperLinkUrlBase" xml:space="preserve">
+    <value>http://wiki.guildwars2.com/wiki/{0}</value>
+  </data>
+  <data name="TextBoxTradingPostDataDemandLabel" xml:space="preserve">
+    <value>Demand:</value>
+  </data>
+  <data name="TextBoxTradingPostDataSupplyLabel" xml:space="preserve">
+    <value>Supply:</value>
+  </data>
+  <data name="TextBoxTradingPostDataBuyPriceLabel" xml:space="preserve">
+    <value>Buy Price:</value>
+  </data>
+  <data name="TextBoxTradingPostDataSellPriceLabel" xml:space="preserve">
+    <value>Sell Price:</value>
+  </data>
+  <data name="Gw2SpidyItemHyperLinkUrlBase" xml:space="preserve">
+    <value>http://www.gw2spidy.com/item/{0}</value>
+  </data>
+  <data name="InfusionSlotLabel" xml:space="preserve">
+    <value>Infusion Slot</value>
+  </data>
+  <data name="TextBoxTradingPostDataNoDataFound" xml:space="preserve">
+    <value>No data found!</value>
+  </data>
+</root>

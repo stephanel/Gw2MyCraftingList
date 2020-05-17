@@ -1,0 +1,257 @@
+﻿This is a complete listing of the known elements of the item_details.json framework.
+
+{
+  //
+  // Common elements
+  //
+  "item_id":                // str (implicit int), not null
+  "name":                   // str, not null
+  "description":            // str
+  "type":                   // str, not null - most types have a type-specific element that appears later in the object
+    :"Armor"                  // type element: armor
+    :"Back"                   // type element: back
+    :"Bag"                    // type element: bag
+    :"Consumable"             // type element: consumable
+    :"Container"              // type element: container
+    :"CraftingMaterial"       // type element: crafting_material - always an empty string
+    :"Gathering"              // type element: gathering
+    :"Gizmo"                  // type element: gizmo
+    :"MiniPet"                // no type element
+    :"Tool"                   // type element: tool
+    :"Trinket"                // type element: trinket
+    :"Trophy"                 // type element: trophy - always an empty string
+    :"UpgradeComponent"       // type element: upgrade_component
+    :"Weapon"                 // type element: weapon
+  "level":                  // str (implicit int), not null
+  "rarity":                 // str, not null
+    :"Junk"
+    :"Basic"
+    :"Fine"
+    :"Masterwork"
+    :"Rare"
+    :"Exotic"
+    :"Ascended"
+    :"Legendary"
+  "vendor_value":           // str (implicit int), not null
+  "icon_file_id":			// str (implicit int), not null
+  "icon_file_signature"		// str, not null
+  "game_types":             // array(str), not empty
+    [
+      "Activity",
+      "Dungeon",
+      "Pve",
+      "Pvp",
+      "PvpLobby",
+      "Wvw"
+    ]
+  "flags":                  // array(str)
+    [
+      "AccountBound",
+      "HideSuffix",
+      "NoMysticForge",
+      "NoSalvage",
+      "NoSell",
+      "NotUpgradeable",
+      "NoUnderwater",
+      "SoulBindOnAcquire",
+      "SoulBindOnUse",
+      "Unique"
+    ]
+  "restrictions":           // array(str)
+    [
+      "Asura",
+      "Charr",
+      "Human",
+      "Norn",
+      "Sylvari"
+      // A single item has value ["Guardian","Warrior"] - seems like a profession-based system that they tried but abandoned
+    ]
+  //
+  // type elements
+  //
+  "armor":                  // obj
+    {
+      "type":                 // str, not null
+        :"Boots"
+        :"Coat"
+        :"Gloves"
+        :"Helm"
+        :"HelmAquatic"
+        :"Leggings"
+        :"Shoulders"
+      "weight_class":         // str, not null
+        :"Heavy"
+        :"Light"
+        :"Medium"
+      "defense":              // str (implicit int), not null
+      "infusion_slots":       // array(obj), SEE BELOW
+      "infix_upgrade":        // obj, SEE BELOW
+      "suffix_item_id":       // str (implicit int)
+    }
+  "back":                   // obj
+    {
+      "infusion_slots":       // array(obj), SEE BELOW
+      "infix_upgrade":        // obj, SEE BELOW
+      "suffix_item_id":       // str (implicit int)
+    }
+  "bag":                    // obj
+    {
+      "no_sell_or_sort":      // str (implicit bool), not null
+      "size":                 // str (implicit int), not null
+    }
+  "consumable":             // obj
+    {
+      "type":                 // str, not null
+        :"AppearanceChange"
+        :"Booze"
+        :"ContractNpc"
+        :"Food"
+        :"Generic"
+        :"Halloween"
+        :"Immediate"
+        :"Transmutation"
+        :"Unlock"
+        :"Utility"
+      "duration_ms":          // str (implicit_int)
+      "description":          // str
+    }
+  "container":              // obj
+    {
+      "type":                 // str, not null
+        :"Default"
+        :"GiftBox"
+    }
+  "gathering":              // obj
+    {
+      "type":                 // str, not null
+        :"Foraging"
+        :"Logging"
+        :"Mining"
+    }
+  "gizmo":                  // obj
+    {
+      "type":                 // str, not null
+        :"Default"
+        :"RentableContractNpc"
+        :"UnlimitedConsumable"
+    }
+  "tool":                   // obj
+    {
+      "type":                 // str, not null
+        :"Salvage"
+      "charges":                 // str (implicit int), not null
+    }
+  "trinket":                // obj
+    {
+      "type":                 // str, not null
+        :"Accessory"
+        :"Amulet"
+        :"Ring"
+      "infusion_slots":       // array(obj), SEE BELOW
+      "infix_upgrade":        // obj, SEE BELOW
+      "suffix_item_id":       // str (implicit int)
+    }
+  "upgrade_component":      // obj
+    {
+      "type":                 // str, not null
+        :"Default"
+        :"Gem"
+        :"Rune"
+        :"Sigil"
+      "flags":                // array, not empty
+        [
+          // Only 4 valid value combinations:
+          // - all equipment types
+          "HeavyArmor","LightArmor","MediumArmor","Trinket","Axe","LongBow","ShortBow","Dagger","Focus","Greatsword","Hammer","Harpoon","Mace","Pistol","Rifle","Scepter","Shield","Speargun","Staff","Sword","Torch","Trident","Warhorn"
+          // - weapons only
+          "Axe","LongBow","ShortBow","Dagger","Focus","Greatsword","Hammer","Harpoon","Mace","Pistol","Rifle","Scepter","Shield","Speargun","Staff","Sword","Torch","Trident","Warhorn"
+          // -armor only
+          "HeavyArmor","LightArmor","MediumArmor"
+          // -trinkets only
+          "Trinket"
+        ]
+      "infusion_upgrade_flags": // array(str)
+        [
+          "Defense",
+          "Offense",
+          "Utility"
+        ]
+      "infix_upgrade":        // obj, SEE BELOW
+      "suffix":               // str
+    }
+  "weapon":                 // obj
+    {
+      "type":                 // str, not null
+        :"Axe"
+        :"Dagger"
+        :"Focus"
+        :"Greatsword"
+        :"Hammer"
+        :"Harpoon"
+        :"LongBow"
+        :"Mace"
+        :"Pistol"
+        :"Rifle"
+        :"Scepter"
+        :"Shield"
+        :"ShortBow"
+        :"Speargun"
+        :"Staff"
+        :"Sword"
+        :"Torch"
+        :"Toy"
+        :"Trident"
+        :"TwoHandedToy"
+        :"Warhorn"
+      "damage_type":          // str, not null
+        :"Fire"
+        :"Ice"
+        :"Lightning"
+        :"Physical"
+      "min_power":            // str (implicit int)
+      "max_power":            // str (implicit int)
+      "defense":              // str (implicit int)
+      "infusion_slots":       // array(obj), SEE BELOW
+      "infix_upgrade":        // obj, SEE BELOW
+      "suffix_item_id":       // str (implicit int)
+    }
+}
+The following are elements found within the type-specific objects that are shared among all equipment types: Armor, Back, Trinket, and Weapon. infix_upgrade is also used by UpgradeComponent.
+
+//
+// Shared sub-elements
+//
+      "infusion_slots":       // array(obj)
+        [
+          {
+            "flags":            // array(str), not empty (never has >1 value currently)
+              [
+                "Defense",
+                "Offense",
+                "Utility"
+              ]
+            "item":             // str (always null currently)
+          }
+        ]
+      "infix_upgrade":        // obj
+        {
+          "buff":               // obj (when empty is currently presented as empty string)
+            {
+              "skill_id":         // str, not null
+              "description":      // str, not null
+            }
+          "attributes":         // array(obj)
+            [
+              {
+                "attribute":      // str, not null
+                  :"ConditionDamage"
+                  :"CritDamage"
+                  :"Healing"
+                  :"Power"
+                  :"Precision"
+                  :"Toughness"
+                  :"Vitality"
+                "modifier":       // str, not null
+              }
+            ]
+        }

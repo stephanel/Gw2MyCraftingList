@@ -1,0 +1,36 @@
+﻿<Window x:Class="GW2ExplorerCraftTool.DeleteRecipeInErrorMessage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:GW2ExplorerCraftTool"
+        xmlns:props="clr-namespace:GW2ExplorerCraftTool.Properties"
+        Title="{x:Static props:Resources.DeleteRecipeInErrorMessageTitle}" Height="180" Width="360" WindowStartupLocation="CenterOwner" ResizeMode="NoResize">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="20" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="20" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="40" />
+            <ColumnDefinition Width="120" />
+            <ColumnDefinition Width="30" />
+            <ColumnDefinition Width="120" />
+            <ColumnDefinition Width="40" />
+        </Grid.ColumnDefinitions>
+        <TextBlock Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" TextWrapping="Wrap"
+                   Text="{x:Static props:Resources.DeleteRecipeInErrorMessageContent}" >
+        </TextBlock>
+        <TextBlock x:Name="tbRecipesCountInError" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3" TextWrapping="Wrap"
+                   Text="X recipes in error" Foreground="Red" >
+        </TextBlock>
+        <Button x:Name="bDelete" Grid.Row="4" Grid.Column="1" Click="bDelete_Click" Cursor="Hand">
+            <TextBlock Text="{x:Static props:Resources.DeleteRecipeInErrorMessageButtonDelete}" />
+        </Button>
+        <Button x:Name="bNotDelete" Grid.Row="4" Grid.Column="3" Click="bNotDelete_Click" Cursor="Hand">
+            <TextBlock Text="{x:Static props:Resources.DeleteRecipeInErrorMessageButtonNotDelete}" />
+        </Button>
+    </Grid>
+</Window>

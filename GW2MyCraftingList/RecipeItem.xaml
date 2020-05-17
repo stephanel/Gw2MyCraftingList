@@ -1,0 +1,83 @@
+﻿<UserControl x:Class="GW2ExplorerCraftTool.RecipeItem"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="53.834" d:DesignWidth="619.25" BorderBrush="#FF706A6A" BorderThickness="0,1,0,0">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20" />
+            <ColumnDefinition Width="36"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <CheckBox x:Name="cbCheckRecipe" Grid.Row="0" Grid.Column="0" Checked="cbCheckRecipe_Checked" Unchecked="cbCheckRecipe_Unchecked" Cursor="Hand" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="2,2,0,0" />
+        <Canvas x:Name="cIconContainer" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Width="32" Margin="2,2,0,0" >
+            <Canvas.Background>
+                <ImageBrush x:Name="iRecipeIcon" />
+            </Canvas.Background>
+            <TextBlock x:Name="tbOutputItemsCount" Text="99" Canvas.Top="19" Foreground="White" FontSize="11" HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="30" Height="12" TextAlignment="Right" Canvas.Left="1" FontWeight="Bold"/>
+        </Canvas>
+        <Grid Grid.Row="0" Grid.Column="2" Margin="2,2,0,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="350"/>
+                <ColumnDefinition Width="20"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock x:Name="tbRecipeName" Grid.Row="0" Grid.Column="0" Padding="5,0,0,0" Text="Name of the recipe" TextWrapping="Wrap" HorizontalAlignment="Left" Width="271" ToolTipOpening="tbRecipeName_ToolTipOpening" VerticalAlignment="Top" Cursor="Hand">
+                <TextBlock.ToolTip>
+                    <ToolTip x:Name="ttRecipeToolTip" BorderBrush="Black" Background="#FF302323">
+                        <StackPanel Width="280">
+                            <StackPanel Height="35" Width="280" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Top">
+                                <Image x:Name="iRecipeToolTipIcon" Margin="2,2,2,2" VerticalAlignment="Top" Width="35" Height="35" />
+                                <TextBlock x:Name="tbRecipeToolTipName" FontWeight="Bold" Foreground="White" Padding="5,0,5,0" TextWrapping="Wrap" Width="250"></TextBlock>
+                            </StackPanel>
+                            <StackPanel>
+                                <TextBlock x:Name="tbRecipeToolTipDescription" TextWrapping="Wrap" Foreground="White"></TextBlock>
+                            </StackPanel>
+                        </StackPanel>
+                    </ToolTip>
+                </TextBlock.ToolTip>
+            </TextBlock>
+            <Button x:Name="bExpandRecipe" Grid.Row="0" Grid.Column="1" Cursor="Hand" HorizontalAlignment="Left" Width="16" Height="16" VerticalAlignment="Top" Background="{x:Null}" BorderBrush="#FF707070" Click="bExpandRecipe_Click" Margin="2,0,0,0">
+                <TextBlock x:Name="tbButtonExpandIngredients" Text="+" Width="16" Height="18" TextAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Black" Background="#FFDDDDDD" />
+            </Button>
+            <StackPanel Grid.Row="1" Grid.Column="0" Margin="5,1,5,0">
+                <TextBlock x:Name="tbRecipeDescription" TextWrapping="Wrap" FontSize="10" Width="271" Foreground="White" VerticalAlignment="Top" HorizontalAlignment="Left">Description of the recipe</TextBlock>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="20" />
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button x:Name="bRequestTradingPostData" Grid.Row="0" Grid.Column="0" Click="bRequestTradingPostData_Click" Cursor="Hand" Width="20" Height="20" Background="#FF302323" BorderBrush="#FF302323" VerticalContentAlignment="Center" VerticalAlignment="Top" BorderThickness="0">
+                        <Image x:Name="iTradingPost" VerticalAlignment="Top" Stretch="Fill" />
+                    </Button>
+                    <ItemsControl x:Name="pricesContainer" Grid.Row="0" Grid.Column="1" ScrollViewer.VerticalScrollBarVisibility="Disabled" BorderThickness="0" VerticalContentAlignment="Stretch" />
+                </Grid>
+            </StackPanel>
+            <!-- <Run Text="Description of the recipe"/> -->
+            <ItemsControl x:Name="ingredientsContainer" Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="3" ScrollViewer.VerticalScrollBarVisibility="Disabled" HorizontalContentAlignment="Right" BorderThickness="0" VerticalContentAlignment="Stretch" />
+            <TextBlock x:Name="tbGwSpidyHyperLinkContainer"  Grid.Row="0" Grid.Column="2" TextAlignment="Right" Width="48" Padding="5,0,0,0" Margin="0,0,30,0" HorizontalAlignment="Left">
+                <Hyperlink x:Name="hlGw2SpidyLink" NavigateUri="" RequestNavigate="Hyperlink_RequestNavigate" FontSize="9" Foreground="#FF4F9DFE">
+                   GW2Spidy
+                </Hyperlink>
+            </TextBlock>
+            <TextBlock x:Name="tbWikiHyperLinkContainer"  Grid.Row="0" Grid.Column="2" TextAlignment="Right" Padding="2,0" HorizontalAlignment="Left" Width="26" Margin="53,0,0,0">
+                <Hyperlink x:Name="hlWikiLink" NavigateUri="" RequestNavigate="Hyperlink_RequestNavigate" FontSize="9" Foreground="#FF4F9DFE">
+                    Wiki
+                </Hyperlink>
+            </TextBlock>
+        </Grid>
+    </Grid>
+</UserControl>

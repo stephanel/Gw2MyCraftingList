@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="GW2 Explorer - Craft Tool.exe" version="0.0.0.5" publicKeyToken="a0b4ec24bdf3228e" language="neutral" processorArchitecture="msil" type="win32" />
+  <description asmv2:iconFile="Resources\102465.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="GW2 Explorer - Craft Tool" version="0.0.0.5" language="neutral" processorArchitecture="msil" />
+    <commandLine file="GW2 Explorer - Craft Tool.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!-- Options du manifeste de contrôle de compte d'utilisateur
+             Si vous souhaitez modifier le niveau du contrôle de compte d'utilisateur Windows, remplacez le nœud 
+             requestedExecutionLevel par l'une des propositions suivantes.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+            La spécification du nœud requestedExecutionLevel désactivera la virtualisation de fichiers et du Registre.
+            Si vous souhaitez utiliser la virtualisation de fichiers et du Registre pour la compatibilité 
+            descendante, supprimez le noeud requestedExecutionLevel.
+        -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="GW2 Explorer - Craft Tool.exe" size="169984">
+      <assemblyIdentity name="GW2 Explorer - Craft Tool" version="0.0.0.5" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>rXIrRbsfAxkLtIYriwKwEA6LVfI=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="en\GW2 Explorer - Craft Tool.resources.dll" size="40960">
+      <assemblyIdentity name="GW2 Explorer - Craft Tool.resources" version="0.0.0.5" language="en" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>JVpIXQszIwgQeJTMNurS9TyhRDQ=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="fr\GW2 Explorer - Craft Tool.resources.dll" size="40960">
+      <assemblyIdentity name="GW2 Explorer - Craft Tool.resources" version="0.0.0.5" language="fr" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>IrC43oWgDb/VqFyRo4P4HdIPskY=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="System.Data.SQLite.dll" size="904704">
+      <assemblyIdentity name="System.Data.SQLite" version="1.0.66.0" publicKeyToken="DB937BC2D44FF139" language="neutral" processorArchitecture="x86" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>EFF0T2VKbSBZCXD5M14e8kbw+mc=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="GW2 Explorer - Craft Tool.exe.config" size="961">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>Uja9Q33n9KBn0n5HKpHCc+CHktw=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\102465.ico" size="16958">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>tH8zqZ/ax8mJdQJEFzCWiJ/3qdQ=</dsig:DigestValue>
+    </hash>
+  </file>
+  <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">
+    <application>
+      <!-- Liste de toutes les versions de Windows avec lesquelles cette application peut fonctionner. 
+      Windows sélectionnera automatiquement l'environnement le plus compatible.-->
+      <!-- Si votre application est conçue pour fonctionner avec Windows Vista, supprimez les commentaires du nœud supportedOS suivant-->
+      <!--<supportedOS Id="{e2011457-1546-43c5-a5fe-008deee3d3f0}"></supportedOS>-->
+      <!-- Si votre application est conçue pour fonctionner avec Windows 7, supprimez les commentaires du nœud supportedOS suivant-->
+      <!--<supportedOS Id="{35138b9a-5d96-4fbd-8e2d-a2440225f93a}"/>-->
+      <!-- Si votre application est conçue pour fonctionner avec Windows 8, supprimez les commentaires du nœud supportedOS suivant-->
+      <!--<supportedOS Id="{4a2f28e3-53b9-4441-ba9c-d69d4a4a6e38}"></supportedOS>-->
+    </application>
+  </compatibility>
+<publisherIdentity name="CN=ALTERNATIVE-INV\s.lasmartre" issuerKeyHash="0a58b09acbb46be42704706071329075326e14b6" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>kyblzMxVL4wPLcVUZI4lBRIdNeM=</DigestValue></Reference></SignedInfo><SignatureValue>eUmaAtVBYE3Z6eQ4VsYLRFQm93/WaNiNv6psfckKhhVI6t7e7K1PgV+I7TOnd6hQKVm/bxVOGGATlKsqy8DZNw8FClt4ImRZ8mL2TBVLLEnHAOmKLq5Imakw4hO7T8oLmT+FXlLzT6M4o+3OE5Ihtsy58IyfF8PfrVa2g6EEuNQ=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>7vsWQFMdgLCpzAmxPCQGVafVy06lxJZ7V4PW99pRS/8q9d4Or6ks7tsWK7apPlHfqKwwru7QUqaYydAwH0qExtRJy5LEAEdX/DsYT/LThDAw5utdqxC1ip/SHDRthpZH3Afhc69M3I5+RZ94K1EBAX6VpeH7VHgJH0n+kUpeuSE=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="e3351d1205258e6454c52d0f8c2f55cccce52693" Description="" Url=""><as:assemblyIdentity name="GW2 Explorer - Craft Tool.exe" version="0.0.0.5" publicKeyToken="a0b4ec24bdf3228e" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=ALTERNATIVE-INV\s.lasmartre</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>aBsUqcgL1sPrB2knaWIPgnyRiSU=</DigestValue></Reference></SignedInfo><SignatureValue>Q7uY9oVvbcv+2udij831lAA7cgaA4cPGqs0kYnZY6GRitmbaAiz2onV4b2NtN7P6Y58NJga4TxmGb2sdpYsuJA7soE0R3PYHGP8S8EWoXrlObI5f73ker4/BjNztx5Yh1It9MV6Xpt1tOJf/Dq+QHUZsbZKI1ozriKLJbs55iUM=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>7vsWQFMdgLCpzAmxPCQGVafVy06lxJZ7V4PW99pRS/8q9d4Or6ks7tsWK7apPlHfqKwwru7QUqaYydAwH0qExtRJy5LEAEdX/DsYT/LThDAw5utdqxC1ip/SHDRthpZH3Afhc69M3I5+RZ94K1EBAX6VpeH7VHgJH0n+kUpeuSE=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIICBTCCAW6gAwIBAgIQSnZ+UPPHY6NKNtNtZ3cQOTANBgkqhkiG9w0BAQUFADBBMT8wPQYDVQQDHjYAQQBMAFQARQBSAE4AQQBUAEkAVgBFAC0ASQBOAFYAXABzAC4AbABhAHMAbQBhAHIAdAByAGUwHhcNMTMwNzEwMDg1NjM0WhcNMTQwNzEwMTQ1NjM0WjBBMT8wPQYDVQQDHjYAQQBMAFQARQBSAE4AQQBUAEkAVgBFAC0ASQBOAFYAXABzAC4AbABhAHMAbQBhAHIAdAByAGUwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAO77FkBTHYCwqcwJsTwkBlWn1ctOpcSWe1eD1vfaUUv/KvXeDq+pLO7bFiu2qT5R36isMK7u0FKmmMnQMB9KhMbUScuSxABHV/w7GE/y04QwMObrXasQtYqf0hw0bYaWR9wH4XOvTNyOfkWfeCtRAQF+laXh+1R4CR9J/pFKXrkhAgMBAAEwDQYJKoZIhvcNAQEFBQADgYEAAoP0sRq+wSPhwVAjakHgxybDtWXnBIFXfBFw2ooDggoaSLd4aUUynb2c1FIAsmJLkssT6i2RhxkK+CZcloRyQ/wb0HSQwf4Uz3hdoYxxvsVl49b8Q0z6VmpEBBf1UJEvg52QL1RkbedfksGJrlWxyM69D4oqYXRJi9kJPbKX8pY=</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>

@@ -1,0 +1,37 @@
+﻿<RichTextBox Foreground="White" Background="{x:Null}" BorderBrush="{x:Null}" Padding="25" IsReadOnly="True" IsDocumentEnabled="True" Margin="0,10,0,0" >
+                <RichTextBox.Document>
+                    <FlowDocument>
+                        <Paragraph>
+                            Bienvenue sur GW2 Crafter - My Recipes finder.
+                        </Paragraph>
+                        <Paragraph>
+                            Mon objectif en créant cet outil était d'avoir sous la main la liste complète des recettes, et de pouvoir rechercher celles que je ne connaissais pas in-game.
+                            L'idée était surtout de pouvoir les éliminer de cette liste au fur et à mesure de leur découverte.
+                            C'est mon gros défaut sur les MMORPG : je veux toujours connaître toutes les recettes en artisanat ;)
+                        </Paragraph>
+                        <Paragraph>
+                            Comment ça marche ?
+                            
+                            L'outils récupère les données relatives aux recettes via l'API Web proposée par
+                            <TextBlock>ArenaNet</TextBlock> et celle proposée par
+                            <TextBlock>
+                                    <Hyperlink NavigateUri="http://www.gw2spidy.com" Foreground="#FF4F9DFE" Cursor="Hand" RequestNavigate="Hyperlink_RequestNavigate">Gw2Spidy</Hyperlink>
+                            </TextBlock> .
+                            Les données sont téléchargées en tache de fond. Vous pouvez donc effectuer vos recherches sans avoir à attendre que l'intégralité des recettes soient téléchargées.
+                            <Figure Width="200" Margin="10">
+                                <BlockUIContainer>
+                                    <Image Source="http://gw2explorer.koding.com/images/howto/en/menu_areas.jpg" Height="110" Width="196" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0"/>
+                                </BlockUIContainer>
+                            </Figure>
+                        </Paragraph>
+                        <Paragraph>Nous remerçions
+                            <TextBlock>
+                                    <Hyperlink NavigateUri="http://www.gw2spidy.com" Foreground="#FF4F9DFE" Cursor="Hand" RequestNavigate="Hyperlink_RequestNavigate">Gw2 Spidy</Hyperlink>
+                            </TextBlock> ,
+                            <TextBlock>
+                                    <Hyperlink NavigateUri="http://www.gw2db.com" Foreground="#FF4F9DFE" Cursor="Hand" RequestNavigate="Hyperlink_RequestNavigate">Gw2 DB</Hyperlink>
+                            </TextBlock> pour leur travail et pour tout ce qu'ils donnent pour le plaisir de la communauté.
+                        </Paragraph>
+                    </FlowDocument>
+                </RichTextBox.Document>
+            </RichTextBox>

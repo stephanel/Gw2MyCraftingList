@@ -1,0 +1,53 @@
+﻿<UserControl xmlns:local="clr-namespace:GW2ExplorerCraftTool" x:Class="GW2ExplorerCraftTool.TradingPostDataItem"
+             xmlns:props="clr-namespace:GW2ExplorerCraftTool.Properties"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="30" d:DesignWidth="320" Foreground="White" FontSize="10">
+    <Grid Background="#FF302323" ScrollViewer.VerticalScrollBarVisibility="Disabled">
+        <StackPanel>
+            <!-- Row #0 -->
+            <TextBlock x:Name="tbNoDataFound" Visibility="Collapsed" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="Red" FontSize="12"
+                       Text="{x:Static props:Resources.TextBoxTradingPostDataNoDataFound}"></TextBlock>
+            <Grid x:Name="gTradingPostData">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="18" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="18" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="18" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <!-- Row #1 -->
+                <TextBlock x:Name="tbMaxBuyLabel" Grid.Row="0" Grid.Column="0" Text="{x:Static props:Resources.TextBoxTradingPostDataBuyPriceLabel}"></TextBlock>
+                <TextBlock x:Name="tbMaxBuyGoldPart" Padding="5,0,0,0" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Right" TextAlignment="Right" >XX</TextBlock>
+                <Image x:Name="iMaxBuyGoldIcon" Height="16" Width="16" Grid.Row="0" Grid.Column="2" ></Image>
+                <TextBlock x:Name="tbMaxBuySilverPart" Padding="5,0,0,0" Grid.Row="0" Grid.Column="3" HorizontalAlignment="Right" TextAlignment="Right">XX</TextBlock>
+                <Image x:Name="iMaxBuySilverIcon" Height="16" Width="16" Grid.Row="0" Grid.Column="4" ></Image>
+                <TextBlock x:Name="tbMaxBuyCopperPart" Padding="5,0,0,0" Grid.Row="0" Grid.Column="5" HorizontalAlignment="Right" TextAlignment="Right" >XX</TextBlock>
+                <Image x:Name="iMaxBuyCopperIcon" Height="16" Width="16" Grid.Row="0" Grid.Column="6" ></Image>
+                <TextBlock Grid.Row="0" Grid.Column="7"  Padding="5,0,0,0" Text="{x:Static props:Resources.TextBoxTradingPostDataDemandLabel}"></TextBlock>
+                <TextBlock x:Name="tbOffer" Grid.Row="0" Grid.Column="8"  Padding="5,0,5,0" TextAlignment="Right">XXXXX</TextBlock>
+                <!-- Row #2 -->
+                <TextBlock x:Name="tbMinSellLabel" Grid.Row="1" Grid.Column="0" Text="{x:Static props:Resources.TextBoxTradingPostDataSellPriceLabel}"></TextBlock>
+                <TextBlock x:Name="tbMinSellGoldPart" Padding="5,0,0,0" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" TextAlignment="Right" >XX</TextBlock>
+                <Image x:Name="iMinSellGoldIcon" Height="16" Width="16" Grid.Row="1" Grid.Column="2" ></Image>
+                <TextBlock x:Name="tbMinSellSilverPart" Padding="5,0,0,0" Grid.Row="1" Grid.Column="3" HorizontalAlignment="Right" TextAlignment="Right">XX</TextBlock>
+                <Image x:Name="iMinSellSilverIcon" Height="16" Width="16" Grid.Row="1" Grid.Column="4" ></Image>
+                <TextBlock x:Name="tbMinSellCopperPart" Padding="5,0,0,0" Grid.Row="1" Grid.Column="5" HorizontalAlignment="Right" TextAlignment="Right" >XX</TextBlock>
+                <Image x:Name="iMinSellCopperIcon" Height="16" Width="16" Grid.Row="1" Grid.Column="6" ></Image>
+                <TextBlock Grid.Row="1" Grid.Column="7"  Padding="5,0,0,0" Text="{x:Static props:Resources.TextBoxTradingPostDataSupplyLabel}"></TextBlock>
+                <TextBlock x:Name="tbSale" Grid.Row="1" Grid.Column="8"  Padding="5,0,5,0" TextAlignment="Right">XXXXX</TextBlock>
+            </Grid>
+        </StackPanel>
+    </Grid>
+</UserControl>

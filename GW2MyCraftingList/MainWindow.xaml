@@ -1,0 +1,64 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:GW2ExplorerCraftTool" x:Class="GW2ExplorerCraftTool.MainWindow"
+        xmlns:props="clr-namespace:GW2ExplorerCraftTool.Properties"
+        Title="GW2 Explorer - Craft Tool" 
+        Height="600" 
+        Width="860" 
+        MinWidth="860" 
+        MinHeight="600" 
+        ContentRendered="Window_ContentRendered">
+    <Grid Background="#FF302323">
+        <ComboBox x:Name="cbTextSearchMode"  HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="107" Height="22" SelectedIndex="1" />
+        <TextBox x:Name="tbFilter" Margin="122,10,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="331" Height="22" VerticalContentAlignment="Center" KeyUp="onEnterKeyUp"/>
+        <TextBlock HorizontalAlignment="Left" Margin="463,13,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="17" Width="42" Foreground="White" TextAlignment="Right"
+                   Text="{x:Static props:Resources.TextBoxLevelLabel}"/>
+        <TextBox x:Name="tbMinRate" HorizontalAlignment="Left" Height="23" Margin="510,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50" KeyUp="onEnterKeyUp"/>
+        <TextBox x:Name="tbMaxRate" HorizontalAlignment="Left" Height="23" Margin="565,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50" KeyUp="onEnterKeyUp"/>
+        <ComboBox x:Name="cblanguages" Margin="0,10,10,0" HorizontalAlignment="Right" Width="58" Height="20" VerticalAlignment="Top" SelectionChanged="cblanguages_SelectionChanged"></ComboBox>
+        <ComboBox x:Name="cbDisciplines" HorizontalAlignment="Left" Margin="10,37,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="cbDisciplines_SelectionChanged" />
+        <ComboBox x:Name="cbRecipeTypes" HorizontalAlignment="Left" Margin="135,37,0,0" VerticalAlignment="Top" Width="120"  />
+        <ComboBox x:Name="cbRarities" HorizontalAlignment="Left" Margin="260,37,0,0" VerticalAlignment="Top" Width="120" />
+        <CheckBox x:Name="cbShowCheckedRecipes"  Foreground="White" Margin="260,64,287,0" VerticalAlignment="Top" Height="14"
+                   Content="{x:Static props:Resources.CheckBoxShowCheckRecipes}" HorizontalAlignment="Left" />
+        <CheckBox x:Name="cbSearchAlsoIngredients" Foreground="White" Margin="10,64,537,0" VerticalAlignment="Top" Height="15" 
+                  Content="{x:Static props:Resources.CheckBoxSearchAlsoIngredients}" HorizontalAlignment="Left" />
+        <TextBlock Margin="0,65,10,0" TextAlignment="Right" VerticalAlignment="Top" HorizontalAlignment="Right" Width="246" Height="17">
+            <Hyperlink x:Name="showMeLatestDownload_url" NavigateUri="" RequestNavigate="ShowMeLatestDownload">
+                <TextBlock Text="{x:Static props:Resources.TextBoxShowMeLatestDownloadedRecipes}"/>
+            </Hyperlink>
+        </TextBlock>
+        <TextBlock Margin="0,82,10,0" TextAlignment="Right" VerticalAlignment="Top" HorizontalAlignment="Right" Width="246" Height="18">
+            <Hyperlink x:Name="showMeRecipesInError_url" NavigateUri="" RequestNavigate="ShowMeRecipesInError">
+                <TextBlock Text="{x:Static props:Resources.TextBoxShowMeRecipesInError}"/>
+            </Hyperlink>
+        </TextBlock>
+        <Button x:Name="bSearch" Margin="536,38,0,0" Click="bSearch_Click" Cursor="Hand" HorizontalAlignment="Left" Width="79" VerticalAlignment="Top" Height="22" IsEnabled="False">
+            <TextBlock x:Name="ButtonSearchText" Margin="0,0,0,0" Text="{x:Static props:Resources.ButtonSearchText}" Width="77" Height="18" TextAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" />
+        </Button>
+        <TextBlock x:Name="tbResults" HorizontalAlignment="Left" Margin="10,82,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="18" Width="526" Foreground="White"
+                   Text="{x:Static props:Resources.TextBoxSearchResultDefaultText}"/>
+        <ScrollViewer x:Name="svScroller" VerticalScrollBarVisibility="Auto" Margin="0,105,0,26">
+            <ItemsControl x:Name="recipesContainer" Margin="0" ScrollViewer.VerticalScrollBarVisibility="Disabled">
+            </ItemsControl>
+        </ScrollViewer>
+        <Grid x:Name="gWelcomeMsg" Margin="0,105,0,26" Visibility="Collapsed">
+            <RichTextBox x:Name="rtbWelcomeMsg" Foreground="White" Background="{x:Null}" BorderBrush="{x:Null}" Padding="25" IsReadOnly="True" IsDocumentEnabled="True" Margin="0,10,0,0">
+            </RichTextBox>
+        </Grid>
+        <Grid x:Name="gNotifications" Height="16" VerticalAlignment="Bottom" Margin="5,0,5,5">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="21" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <TextBlock x:Name="tbCurrentTask" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Téléchargement en cours... 99999/99999 - 99.99%" VerticalAlignment="Top" Foreground="White" Height="16" Padding="0,0,15,0"/>
+            <ProgressBar x:Name="pbDownloadIndicator" Grid.Row="0" Grid.Column="1" VerticalAlignment="Top" Height="16" Padding="15,0" />
+            <TextBlock x:Name="tbCachedRecipes" Grid.Row="0" Grid.Column="2" HorizontalAlignment="Right" VerticalAlignment="Top" Foreground="White" TextAlignment="Right" Text="cached recipes..." Height="16" Padding="15,0,0,0" Visibility="Collapsed" />
+        </Grid>
+    </Grid>
+</Window>
